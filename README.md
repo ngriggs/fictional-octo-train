@@ -7,4 +7,5 @@ to run this code in a browser type:
 npm run dev
 
 to run the tailwind css compiler run:
+npm install -D tailwindcss
 npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch
