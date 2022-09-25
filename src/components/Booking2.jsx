@@ -18,6 +18,9 @@ class Booking2 extends Component {
       selectedOption: event.target.value,
     });
   }
+  getValue(event) {
+    console.log(event);
+  }
 
   formSubmit(event) {
     event.preventDefault();
@@ -46,7 +49,7 @@ class Booking2 extends Component {
             <p className="mt-8 font-serif text-xl font-bold text-blue-900">
               Select which day you would like to reserve
             </p>
-            <ActionBarComponent parentCallback={this.callbackFunction} />
+            <ActionBarComponent getValue={console.log(this.newValue)} />
             <p className="mt-8 font-serif text-xl font-bold text-blue-900">
               Select a time
             </p>

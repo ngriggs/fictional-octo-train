@@ -134,7 +134,7 @@ CustomActionBar.propTypes = {
   onSetToday: PropTypes.func.isRequired,
 };
 
-export default function ActionBarComponent() {
+export default function ActionBarComponent({ newValue }) {
   const [value, setValue] = React.useState(() => dayjs("2022-02-01T00:00"));
 
   return (
@@ -142,7 +142,6 @@ export default function ActionBarComponent() {
       <StaticDatePicker
         onChange={(newValue) => {
           setValue(newValue);
-          console.log(newValue);
         }}
         value={value}
         renderInput={(params) => <TextField {...params} />}
