@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import React, { Component } from "react";
 import { splashPhoto1 } from "../assets";
 import ActionBarComponent from "./ActionBarComponent";
@@ -41,62 +42,69 @@ class Booking2 extends Component {
           </p>
         </div>
         <div className="mx-auto grid max-w-screen-lg px-6 pb-20 font-poppins">
-          <p className="mt-8 font-serif text-xl font-bold text-blue-900">
-            Select which day you would like to reserve
-          </p>
-          <ActionBarComponent />
-          <div className="">
+          <form onSubmit={this.formSubmit}>
+            <p className="mt-8 font-serif text-xl font-bold text-blue-900">
+              Select which day you would like to reserve
+            </p>
+            <ActionBarComponent parentCallback={this.callbackFunction} />
             <p className="mt-8 font-serif text-xl font-bold text-blue-900">
               Select a time
             </p>
-            <label className="mt-4 grid grid-cols-4 gap-2 lg:max-w-xl">
-              <div className="rounded-lg bg-emerald-100 px-4 py-2 font-medium text-emerald-900 active:scale-95">
-                10:00 AM to 12:00 PM
-              </div>
-              <button className="rounded-lg bg-emerald-100 px-4 py-2 font-medium text-emerald-900 active:scale-95">
-                1:00 PM - 3:00 PM
-              </button>
-              <button className="rounded-lg bg-emerald-700 px-4 py-2 font-medium text-white active:scale-95">
-                4:00 PM - 6:00 PM
-              </button>
-            </label>
-          </div>
-          <form onSubmit={this.formSubmit}>
-            <div className="radio">
-              <input
-                type="radio"
-                value="10AM-12PM"
-                checked={this.state.selectedOption === "10AM-12PM"}
-                onChange={this.onValueChange}
-              />
-              <label>10AM - 12PM</label>
-            </div>
-            <div className="radio">
-              <label>
+            <div className="mt-4 grid ss:grid-rows-3 md:grid-cols-3 gap-2 lg:max-w-xl">
+              <div>
                 <input
                   type="radio"
+                  id="10-12"
+                  value="10AM-12PM"
+                  class="hidden peer"
+                  checked={this.state.selectedOption === "10AM-12PM"}
+                  onChange={this.onValueChange}
+                />
+                <label
+                  for="10-12"
+                  className="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                >
+                  10:00 AM - 12:00 PM
+                </label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  id="1-3"
                   value="1PM-3PM"
+                  class="hidden peer"
                   checked={this.state.selectedOption === "1PM-3PM"}
                   onChange={this.onValueChange}
                 />
-                1PM-3PM
-              </label>
-            </div>
-            <div className="radio">
-              <label>
+                <label
+                  for="1-3"
+                  className="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                >
+                  1:00 PM - 3:00 PM
+                </label>
+              </div>
+              <div>
                 <input
                   type="radio"
+                  id="4-6"
                   value="4PM-6PM"
+                  class="hidden peer"
                   checked={this.state.selectedOption === "4PM-6PM"}
                   onChange={this.onValueChange}
                 />
-                4PM-6PM
-              </label>
+                <label
+                  for="4-6"
+                  className="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                >
+                  4:00 PM - 6:00 PM
+                </label>
+              </div>
             </div>
-            <div>Selected option is : {this.state.selectedOption}</div>
-            <button className="btn btn-default" type="submit">
-              Submit
-            </button>
+            <div className="mx-auto mt-6 max-w-md text-gray-600 grid place-items-center">
+              <Button variant="contained" onClick={this.formSubmit}>
+                Submit
+              </Button>
+            </div>
           </form>
         </div>
       </div>

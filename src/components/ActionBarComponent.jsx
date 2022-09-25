@@ -1,17 +1,20 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import dayjs from 'dayjs';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import DialogActions from '@mui/material/DialogActions';
-import { unstable_useId as useId } from '@mui/utils';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
+import * as React from "react";
+import PropTypes from "prop-types";
+import dayjs from "dayjs";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import DialogActions from "@mui/material/DialogActions";
+import { unstable_useId as useId } from "@mui/utils";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { StaticDatePicker } from "@mui/x-date-pickers/StaticDatePicker";
 
-import { useLocaleText, WrapperVariantContext } from '@mui/x-date-pickers/internals';
+import {
+  useLocaleText,
+  WrapperVariantContext,
+} from "@mui/x-date-pickers/internals";
 
 const CustomActionBar = (props) => {
   const { onAccept, onClear, onCancel, onSetToday, actions } = props;
@@ -22,7 +25,7 @@ const CustomActionBar = (props) => {
   const id = useId();
 
   const actionsArray =
-    typeof actions === 'function' ? actions(wrapperVariant) : actions;
+    typeof actions === "function" ? actions(wrapperVariant) : actions;
 
   if (actionsArray == null || actionsArray.length === 0) {
     return null;
@@ -30,7 +33,7 @@ const CustomActionBar = (props) => {
 
   const menuItems = actionsArray?.map((actionType) => {
     switch (actionType) {
-      case 'clear':
+      case "clear":
         return (
           <MenuItem
             data-mui-test="clear-action-button"
@@ -44,7 +47,7 @@ const CustomActionBar = (props) => {
           </MenuItem>
         );
 
-      case 'cancel':
+      case "cancel":
         return (
           <MenuItem
             onClick={() => {
@@ -57,7 +60,7 @@ const CustomActionBar = (props) => {
           </MenuItem>
         );
 
-      case 'accept':
+      case "accept":
         return (
           <MenuItem
             onClick={() => {
@@ -70,7 +73,7 @@ const CustomActionBar = (props) => {
           </MenuItem>
         );
 
-      case 'today':
+      case "today":
         return (
           <MenuItem
             data-mui-test="today-action-button"
@@ -93,9 +96,9 @@ const CustomActionBar = (props) => {
     <DialogActions>
       <Button
         id={`picker-actions-${id}`}
-        aria-controls={open ? 'basic-menu' : undefined}
+        aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
+        aria-expanded={open ? "true" : undefined}
         onClick={(event) => setAnchorEl(event.currentTarget)}
       >
         Actions
@@ -106,7 +109,7 @@ const CustomActionBar = (props) => {
         open={open}
         onClose={() => setAnchorEl(null)}
         MenuListProps={{
-          'aria-labelledby': `picker-actions-${id}`,
+          "aria-labelledby": `picker-actions-${id}`,
         }}
       >
         {menuItems}
@@ -122,7 +125,7 @@ CustomActionBar.propTypes = {
    * @default `['cancel', 'accept']` for mobile and `[]` for desktop
    */
   actions: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.oneOf(['accept', 'cancel', 'clear', 'today'])),
+    PropTypes.arrayOf(PropTypes.oneOf(["accept", "cancel", "clear", "today"])),
     PropTypes.func,
   ]),
   onAccept: PropTypes.func.isRequired,
@@ -132,12 +135,15 @@ CustomActionBar.propTypes = {
 };
 
 export default function ActionBarComponent() {
-  const [value, setValue] = React.useState(() => dayjs('2022-02-01T00:00'));
+  const [value, setValue] = React.useState(() => dayjs("2022-02-01T00:00"));
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <StaticDatePicker
-        onChange={(newValue) => setValue(newValue)}
+        onChange={(newValue) => {
+          setValue(newValue);
+          console.log(newValue);
+        }}
         value={value}
         renderInput={(params) => <TextField {...params} />}
         components={{
@@ -145,7 +151,7 @@ export default function ActionBarComponent() {
         }}
         componentsProps={{
           actionBar: {
-            actions: ['today'],
+            actions: ["today"],
           },
         }}
       />
