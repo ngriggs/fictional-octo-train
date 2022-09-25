@@ -1,9 +1,10 @@
 import React from 'react'
 import { socialMedia } from '../constants'
+import { NavLink } from 'react-router-dom'
 
 const Footer2 = () => {
   return (
-    <footer className='bg-gray-50'>
+    <footer className='bg-gray-50 xl:px-10'>
       <div className='mx-auto grid max-w-screen-xl gap-y-8 gap-x-12 px-4 py-10 md:grid-cols-2 xl:grid-cols-4 xl:px-10'>
         <div className='max-w-sm'>
           <div className='mb-6 flex h-12 items-center space-x-2'>
@@ -30,42 +31,57 @@ const Footer2 = () => {
           <nav aria-label='Footer Navigation' className='text-gray-500'>
             <ul className='space-y-3'>
               <li>
-                <a className='hover:text-blue-600 hover:underline' href='#'>
+                <NavLink
+                  className='hover:text-blue-600 hover:underline'
+                  to='/pricing'
+                >
                   Pricing
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a className='hover:text-blue-600 hover:underline' href='#'>
-                  Demo
-                </a>
+                <NavLink
+                  className='hover:text-blue-600 hover:underline'
+                  to='/gallery'
+                >
+                  Gallery
+                </NavLink>
               </li>
               <li>
-                <a className='hover:text-blue-600 hover:underline' href='#'>
-                  Press
-                </a>
+                <NavLink
+                  className='hover:text-blue-600 hover:underline'
+                  to='/policies'
+                >
+                  Policies
+                </NavLink>
               </li>
               <li>
-                <a className='hover:text-blue-600 hover:underline' href='#'>
-                  Support Hub
-                </a>
+                <NavLink
+                  className='hover:text-blue-600 hover:underline'
+                  to='/about'
+                >
+                  About us
+                </NavLink>
               </li>
               <li>
-                <a className='hover:text-blue-600 hover:underline' href='#'>
+                <NavLink
+                  className='hover:text-blue-600 hover:underline'
+                  to='/contact'
+                >
                   Contact
-                </a>
+                </NavLink>
               </li>
             </ul>
           </nav>
         </div>
-        <div className=''>
+        <div className='max-w-xs'>
           <div className='mt-4 mb-2 font-medium xl:mb-4'>
             Subscribe to our Newsletter
           </div>
-          <div className='flex flex-col'>
-            <div className='mb-4'>
+          <div className='flex flex-col  max-w-xs'>
+            <div className='mb-4 mr-4'>
               <input
                 type='email'
-                className='focus:outline mb-2 block h-14 w-full rounded-xl bg-gray-200 px-4 sm:w-80 focus:outline-none focus:ring-1 focus:ring-blue-600'
+                className='focus:outline mb-2 block h-14 rounded-xl bg-gray-200 px-4 sm:w-80 focus:outline-none focus:ring-1 focus:ring-blue-600 max-w-xs'
                 placeholder='Enter your email'
               />
               <button className='block rounded-xl bg-blue-600 px-6 py-3 font-medium text-white'>

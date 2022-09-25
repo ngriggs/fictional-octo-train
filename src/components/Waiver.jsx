@@ -1,7 +1,12 @@
 import React from 'react'
+import WaiverForm from './WaiverForm'
 
 const Waiver = () => {
-  return <div>Waiver</div>
+  return (
+    <div>
+      <WaiverForm />
+    </div>
+  )
 }
 
 export default Waiver

@@ -12,7 +12,7 @@ const Contact = () => {
             <div className='text-lg sm:text-xl xl:text-xl'>
               <div className='text-gray-900'>
                 <p className='mb-4'>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Please feel free to reach out if you have any questions.
                 </p>
               </div>
             </div>
@@ -22,7 +22,7 @@ const Contact = () => {
       <div className='mx-auto mb-20 flex w-full max-w-screen-lg flex-col overflow-hidden rounded-xl text-gray-900 md:flex-row md:border md:shadow-lg'>
         <form className='mx-auto w-full max-w-xl border-gray-200 px-10 py-8 md:px-8'>
           <div className='mb-4'>
-            <label className='text mb-2 block font-medium' for='email'>
+            <label className='text mb-2 block font-medium' htmlFor='email'>
               Your e-mail:
             </label>
             <input
@@ -33,7 +33,7 @@ const Contact = () => {
             />
           </div>
           <div className='mb-4'>
-            <label className='text mb-2 block font-medium' for='subject'>
+            <label className='text mb-2 block font-medium' htmlFor='subject'>
               Subject:
             </label>
             <input
@@ -44,7 +44,7 @@ const Contact = () => {
             />
           </div>
           <div className='mb-4'>
-            <label className='text mb-2 block font-medium' for='message'>
+            <label className='text mb-2 block font-medium' htmlFor='message'>
               Message:
             </label>
             <textarea
@@ -65,25 +65,23 @@ const Contact = () => {
         </form>
         <div className='mt-10 bg-blue-600 px-10 py-8 text-gray-100 md:mt-0 md:ml-auto'>
           <div className=''>
-            <p className='mb-4 font-medium border-b  pb-2'>OFFICE HOURS</p>
+            <p className='mb-4 font-medium border-b  pb-2'>HOURS</p>
             <p className='mb-4'>Monday – Thursday: 08:00 – 16:00</p>
             <p className='mb-4'>Friday: 08:00 - 15:00</p>
-            <p className='mb-4'>Weekend: Closed</p>
+            <p className='mb-4'>Weekend: Closed for private events</p>
             <p className='mb-4'>
-              Email:
+              Email:{' '}
               <a href='#' className='font-semibold underline'>
-                support@apps.io
+                info@gigglesplay.com
               </a>
             </p>
             <p className='mb-4'>
-              Phone:
+              Phone:{' '}
               <a href='#' className='font-semibold underline'>
-                +46 (0) 10-32 32 322
+                555-555-5555
               </a>
             </p>
             <hr className='my-2 h-0 border-t border-r-0 border-b-0 border-l-0 border-gray-300' />
-            <p className='mb-4'>Org.no: 63452-2832</p>
-            <p className='mb-4'>VAT no: 32353</p>
           </div>
         </div>
       </div>
