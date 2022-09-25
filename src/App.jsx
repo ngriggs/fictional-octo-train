@@ -20,7 +20,6 @@ import Footer2 from './components/Footer2'
 import Error from './components/Error'
 import Contact from './components/Contact'
 import Booking2 from './components/Booking2'
-
 const App = () => (
   <div className='bg-primary w-full overflow-hidden'>
     <BrowserRouter>
@@ -28,7 +27,7 @@ const App = () => (
       <div>
         <Routes className='flex-grow'>
           <Route path='/' index element={<Hero2 />} />
-          <Route path='/booking' element={<Booking />} />
+          <Route path='/booking' element={<Booking2 />} />
           <Route path='/booking2' element={<Booking2 />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/newStuff' element={<Navbar2 />} />
@@ -36,6 +35,7 @@ const App = () => (
           <Route path='*' element={<Error />} />
         </Routes>
       </div>
+      <Booking />
       <div
         className={`bg-primary ${styles.paddingX} ${styles.flexStart} sticky top-[100vh] bottom-0`}
       >
