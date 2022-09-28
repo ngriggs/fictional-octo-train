@@ -2,6 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { birthdayUnsplash2 } from "../assets";
 import styles from "../style";
+import FeedbackCard from "./FeedbackCard";
+import { feedback } from "../constants/index";
 
 const Hero2 = () => {
   return (
@@ -152,6 +154,18 @@ const Hero2 = () => {
               </NavLink>
               <div className="-scale-x-100 absolute left-0 -bottom-10 hidden h-10 w-10 -rotate-12 text-blue-600 md:inline-flex"></div>
             </div>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h1 className={`${styles.heading1} py-0`}>
+            Playspace and Event Venue
+          </h1>
+          <h1 className={styles.heading2}>What's Inside</h1>
+          <div className="grid grid-cols-3 items-center justify-center gap-3 p-5 w-[80%] sm:flex-row sm:divide-x sm:divide-y-0 md:mt-15 font-poppins mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            {feedback.map((feature, index) => (
+              <FeedbackCard key={feature.id} {...feature} index={index} />
+            ))}
           </div>
         </div>
       </div>

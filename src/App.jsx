@@ -1,4 +1,4 @@
-import styles from './style'
+import styles from "./style";
 import {
   Hero2,
   Navbar2,
@@ -7,23 +7,23 @@ import {
   Error,
   Contact,
   Booking2,
-  Gallery
-} from './components'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+  Gallery,
+} from "./components";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const App = () => (
-  <div className='bg-primary w-full overflow-hidden'>
+  <div className="bg-primary w-full overflow-hidden">
     <BrowserRouter>
       <Navbar2 />
       <div>
-        <Routes className='flex-grow'>
-          <Route path='/' index element={<Hero2 />} />
-          <Route path='/booking' element={<Booking2 />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/newStuff' element={<Navbar2 />} />
-          <Route path='/waiver' element={<Waiver />} />
-          <Route path='gallery' element={<Gallery />} />
-          <Route path='*' element={<Error />} />
+        <Routes className="flex-grow">
+          <Route path="/" index element={<Hero2 />} />
+          <Route path="/booking" element={<Booking2 />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/newStuff" element={<Navbar2 />} />
+          <Route path="/waiver" element={<Waiver />} />
+          <Route path="gallery" element={<Gallery />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </div>
 
@@ -36,6 +36,6 @@ const App = () => (
       </div>
     </BrowserRouter>
   </div>
-)
+);
 
-export default App
+export default App;
