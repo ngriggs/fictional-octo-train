@@ -1,7 +1,8 @@
 const styles = {
   boxWidth: 'xl:max-w-[1280px] w-full',
 
-  heading1: 'font-poppins font-semibold xs:text-[24px] text-[16px]  xs:leading-[76.8px] leading-[66.8px] ',
+  heading1:
+    'font-poppins font-semibold xs:text-[24px] text-[16px]  xs:leading-[76.8px] leading-[66.8px] ',
   heading2:
     'font-poppins font-semibold xs:text-[48px] text-[40px]  xs:leading-[76.8px] leading-[66.8px] w-full',
   paragraph: 'font-poppins font-normal text-[18px] leading-[30.8px]',
@@ -14,7 +15,10 @@ const styles = {
   padding: 'sm:px-16 px-6 sm:py-12 py-4',
 
   marginX: 'sm:mx-16 mx-6',
-  marginY: 'sm:my-16 my-6'
+  marginY: 'sm:my-16 my-6',
+
+  rocket: 'opacity-0 transition duration-150 translate-x-0 ease',
+  animateRocket: 'opacity-1 transition duration-150 transform -translate-x-full'
 }
 
 export const layout = {

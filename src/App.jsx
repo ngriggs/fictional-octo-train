@@ -28,9 +28,9 @@ const App = () => (
       </div>
 
       <div
-        className={`bg-primary ${styles.paddingX} ${styles.flexStart} sticky top-[100vh] bottom-0`}
+        className={`bg-primary sticky top-[100vh] bottom-0`}
       >
-        <div className={`${styles.boxWidth}`}>
+        <div className="mx-auto">
           <Footer2 />
         </div>
       </div>
