@@ -26,7 +26,8 @@ import Headroom from "react-headroom";
 const solutions = [
   {
     name: "Book a Party",
-    description: "Book an upcoming party or check if we have availability",
+    description:
+      "Book an upcoming party or check availability on your event date",
     to: "/booking",
     icon: CalendarDaysIcon,
   },

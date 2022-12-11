@@ -1,4 +1,3 @@
-import styles from "./style";
 import {
   Hero2,
   Navbar2,
@@ -26,11 +25,8 @@ const App = () => (
           <Route path="*" element={<Error />} />
         </Routes>
       </div>
-
-      <div
-        className={`bg-primary sticky top-[100vh] bottom-0`}
-      >
-        <div className="mx-auto">
+      <div className={`bg-primary sticky top-[100vh] bottom-0`}>
+        <div className="mx-2">
           <Footer2 />
         </div>
       </div>
