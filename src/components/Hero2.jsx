@@ -4,6 +4,7 @@ import { birthdayUnsplash2 } from "../assets";
 import styles from "../style";
 import FeedbackCard from "./FeedbackCard";
 import { feedback } from "../constants/index";
+import { splashMain } from "../assets";
 
 const Hero2 = () => {
   return (
@@ -33,6 +34,7 @@ const Hero2 = () => {
                     fill="currentColor"
                   />
                 </svg>
+                <img src={splashMain} />
               </span>
             </h1>
             <p className="mx-auto mt-12 max-w-md leading-7 text-gray-600">

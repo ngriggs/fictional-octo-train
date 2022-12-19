@@ -26,6 +26,8 @@ import people03 from './people03.png'
 import giggles from './giggle-3.svg'
 import splashPhoto1 from './splashPhoto-1.jpg'
 import birthdayUnsplash2 from './birthdayUnsplash2.png'
+import splashMain from './splash-main.jpeg'
+
 export {
   airbnb,
   bill,
@@ -54,5 +56,6 @@ export {
   people03,
   giggles,
   splashPhoto1,
-  birthdayUnsplash2
+  birthdayUnsplash2,
+  splashMain
 }

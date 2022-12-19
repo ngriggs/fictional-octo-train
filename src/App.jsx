@@ -7,6 +7,7 @@ import {
   Contact,
   Booking2,
   Gallery,
+  Booking3,
 } from "./components";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/newStuff" element={<Navbar2 />} />
           <Route path="/waiver" element={<Waiver />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/booking3" element={<Booking3 />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </div>

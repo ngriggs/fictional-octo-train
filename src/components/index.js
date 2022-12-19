@@ -17,6 +17,8 @@ import Error from './Error'
 import Contact from './Contact'
 import Booking2 from './Booking2'
 import Gallery from './Gallery'
+import Booking3 from './Booking3'
+import BookingForm from './BookingForm'
 
 export {
   Billing,
@@ -37,5 +39,7 @@ export {
   Error,
   Contact,
   Booking2,
-  Gallery
+  Gallery,
+  Booking3,
+  BookingForm
 }

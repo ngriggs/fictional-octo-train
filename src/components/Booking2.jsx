@@ -2,6 +2,7 @@ import { Button } from "@mui/material";
 import React, { Component } from "react";
 import { splashPhoto1 } from "../assets";
 import Calendar from "./Calendar";
+import BookingForm from "./BookingForm";
 
 class Booking2 extends Component {
   constructor(props) {
@@ -11,7 +12,6 @@ class Booking2 extends Component {
     };
     this.onValueChange = this.onValueChange.bind(this);
   }
-
   onValueChange(event) {
     this.setState({ selectedOption: event.target.value });
   }
@@ -43,6 +43,7 @@ class Booking2 extends Component {
             <p className="mt-8 font-poppins text-xl font-bold text-blue-900">
               Select which day you would like to reserve
             </p>
+            <BookingForm />
             <Calendar />
             <p className="font-poppins mt-8 text-xl font-bold text-blue-900">
               Select a time

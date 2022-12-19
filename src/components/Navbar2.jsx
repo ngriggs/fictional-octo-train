@@ -65,27 +65,27 @@ const resources = [
     name: "Newsletter",
     description:
       "Get all of your questions answered in our forums or contact support.",
-    href: "/newsletter",
+    to: "/booking3",
     icon: NewspaperIcon,
   },
   {
     name: "Guides",
     description:
       "Learn how to maximize our platform to get the most out of it.",
-    href: "/guides",
+    to: "/guides",
     icon: BookmarkSquareIcon,
   },
   {
     name: "Testimonials",
     description:
       "See what meet-ups and other events we might be planning near you.",
-    href: "/testimonials",
+    to: "/testimonials",
     icon: CheckBadgeIcon,
   },
   {
     name: "Frequently Asked Questions",
     description: "Understand how we take your privacy seriously.",
-    href: "/FAQ",
+    to: "/FAQ",
     icon: QuestionMarkCircleIcon,
   },
 ];

@@ -79,11 +79,6 @@ export default function Calendar() {
     let firstDayNextMonth = add(firstDayCurrentMonth, { months: -1 });
     setCurrentMonth(format(firstDayNextMonth, "MMM-yyyy"));
   }
-
-  function getSelectedDay() {
-    console.log(selectedDay);
-    return selectedDay;
-  }
   function nextMonth() {
     let firstDayNextMonth = add(firstDayCurrentMonth, { months: 1 });
     setCurrentMonth(format(firstDayNextMonth, "MMM-yyyy"));
